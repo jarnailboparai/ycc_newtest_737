@@ -129,7 +129,7 @@ img {
   <input type="text" name="name" placeholder="Name" class="name_ico"  value="" />
   <input type="text" name="email" placeholder="Email" class="email_ico"  value=""/>
   <input type="text" name="appointment_date" placeholder="Appointment Date" class="date-input date_ico" readonly="readonly" data-inline="false" data-role="date" value=""/>
-  <input type="hidden" name="appointment_time" value="" />
+  <input type="hidden" name="time_appointment" value="" />
   <!--<div class="time_wrapper">--><input type="text" name="appointment_time1" placeholder="Appointment Time"  readonly="readonly" class="time_ico" id="timepicker1"   />
   <!-- Time list starts here -->
   <!--<div class="timepickerlist-wrapper" tabindex="-1"><ul class="ui-timepicker-list"><li onclick="liUpdateSelect(this);" >12:00am</li><li>12:30am</li><li class="">1:00am</li><li>1:30am</li><li class="ui-timepicker-selected">2:00am</li><li>2:30am</li><li>3:00am</li><li>3:30am</li><li>4:00am</li><li>4:30am</li><li>5:00am</li><li>5:30am</li><li class="selected_time">6:00am</li><li>6:30am</li><li>7:00am</li><li>7:30am</li><li>8:00am</li><li>8:30am</li><li>9:00am</li><li>9:30am</li><li>10:00am</li><li>10:30am</li><li>11:00am</li><li>11:30am</li><li>12:00pm</li><li>12:30pm</li><li>1:00pm</li><li>1:30pm</li><li>2:00pm</li><li>2:30pm</li><li>3:00pm</li><li>3:30pm</li><li>4:00pm</li><li>4:30pm</li><li>5:00pm</li><li>5:30pm</li><li>6:00pm</li><li>6:30pm</li><li>7:00pm</li><li>7:30pm</li><li>8:00pm</li><li>8:30pm</li><li>9:00pm</li><li>9:30pm</li><li>10:00pm</li><li>10:30pm</li><li>11:00pm</li><li>11:30pm</li></ul></div>-->
@@ -158,7 +158,7 @@ img {
 			   });*/
 
 			$('#timepicker1').timepicker().on('hide.timepicker', function(e) {
-				    $('input[name="appointment_time"]').val(e.time.value);
+				    $('input[name="time_appointment"]').val(e.time.value);
 				   //document.getElementById('timepicker1').value = e.time.value ;
                    console.log('The time is ' + e.time.value);
     

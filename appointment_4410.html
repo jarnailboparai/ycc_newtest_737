@@ -260,7 +260,7 @@ img {
 
   <input type="text" name="appointment_date" placeholder="Appointment Date" class="date-input date_ico" readonly="readonly" data-inline="false" data-role="date" value=""/>
 
-  <input type="hidden" name="appointment_time" value="" />
+  <input type="hidden" name="time_appointment" value="" />
 
   <!--<div class="time_wrapper">--><input type="text" name="appointment_time1" placeholder="Appointment Time"  readonly="readonly" class="time_ico" id="timepicker1"   />
 
@@ -318,7 +318,7 @@ img {
 
 			$('#timepicker1').timepicker().on('hide.timepicker', function(e) {
 
-				    $('input[name="appointment_time"]').val(e.time.value);
+				    $('input[name="time_appointment"]').val(e.time.value);
 
 				   //document.getElementById('timepicker1').value = e.time.value ;
 
