@@ -258,9 +258,9 @@ img {
 
   <input type="text" name="email" placeholder="Email" class="email_ico"  value=""/>
 
-  <input type="text" name="appointment_date" placeholder="Appointment Date" class="date-input date_ico" data-inline="false" data-role="date" value=""/>
+  <input type="text" name="appointment_date" placeholder="Appointment Date" class="date-input date_ico" readonly="readonly" data-inline="false" data-role="date" value=""/>
 
-  <input type="text" name="appointment_time" placeholder="Appointment Time"  readonly="readonly" class="time_ico" id="timepicker1" value="" />
+  <input type="text" name="appointment_time" placeholder="Appointment Time"  readonly="readonly" class="time_ico" id="timepicker1"  value="" />
 
   <input type="text" name="phone" placeholder="Phone" class="phone_ico"  value=""/>
 
@@ -293,6 +293,24 @@ img {
 <script type="text/javascript">
 
             $('#timepicker1').timepicker();
+
+			/*$('#timepicker1').timepicker().on('changeTime', function() {
+
+				 $('#timepicker1').val($(this).val());
+
+			   });*/
+
+
+
+			$('#timepicker1').timepicker().on('hide.timepicker', function(e) {
+
+				   $('input[name="appointment_time"]').val(e.time.value);
+
+                   console.log('The time is ' + e.time.value);
+
+    
+
+  });
 
 </script>
 
