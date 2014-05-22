@@ -78,7 +78,7 @@ jQuery(document).ready(function(){
 	        },
 	        error: function(response){
 	        	var argtt = response.responseText;
-				
+				alert(argtt);
 				var arg = JSON.parse(response.responseText);
 				if(arg.success==1)
 				{
